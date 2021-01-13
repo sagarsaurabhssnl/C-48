@@ -106,6 +106,11 @@ function endGame() {
         spaceShip.changeImage("destroy");
         gameOver.visible = true;
         alienGroup.destroyEach();
+        setTimeout(() => {
+            if (spaceShip.x) {
+                spaceShip.destroy();
+            }
+        }, 1000);
     }
 }
 
